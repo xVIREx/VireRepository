@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KOSTKY</title>
+</head>
+<body style="background-color: black">	
+	<div id="resultTxt" onselectstart="return false"></div>
+	<div id="betterResultTxt" onselectstart="return false"></div>
+
+	<button class="dicebtn" onclick="clicked_dice_btn(1)">1</button>
+	<button class="dicebtn" onclick="clicked_dice_btn(2)">2</button>
+	<button class="dicebtn" onclick="clicked_dice_btn(3)">3</button>
+	<button class="dicebtn" onclick="clicked_dice_btn(4)">4</button>
+	<button class="dicebtn" onclick="clicked_dice_btn(5)">5</button>
+	<button class="dicebtn" onclick="clicked_dice_btn(6)">6</button>
+
+	<button class="resetbtn" onclick="clicked_reset_btn()">RES</button>
+
+	<div class = "parent">
+	<button class="scorebtn" onclick="clicked_score_btn(0.5)">50</button>
+	</div>
+	<div class = "parent">
+	<button class="scorebtn" onclick="clicked_score_btn(1)">100</button>
+	</div>
+	<div class = "parent">
+	<button class="scorebtn" onclick="clicked_score_btn(2)">200</button>
+	</div>
+	<div class = "parent">
+	<button class="scorebtn" onclick="clicked_score_btn(5)">500</button>
+	</div>
+	<div class = "parent">
+	<button class="scorebtn" onclick="clicked_score_btn(10)">1000</button>
+	</div>
+	
+	<span id="scoreTxt">0</span>
+	<span id="betterScoreTxt"></span>
+	<br>
+	<span id="dicesTxt">–</span>
+	<span id="betterDicesTxt"></span>
+
+	<script type="text/javascript" src="Kostky.js"></script>
+</body>
+<style type="text/css">
+	body{
+		color: white;
+	}
+	span{
+		font-size: 50px;
+		font-family: "Courier New";
+		margin-right: 50px;
+	}
+	button {
+		margin-bottom: 20px;
+		margin-right: 20px;
+		width: 100px;
+		height: 100px;
+		border: none;
+		outline: none;
+		border-radius: 15px;
+		text-align: center;
+		font-family: "Verdana";
+	}
+	@font-face{
+   		font-family:Monaco; 
+   		src: url(monaco.ttf)
+ 	}
+	#resultTxt {		
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		font-size: 300px;
+		transform: translate(-50%, -60%);
+		font-family: "Monaco";
+	}
+	#betterResultTxt {
+		color: red;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		font-size: 100px;
+		transform: translate(-50%, 60%);
+		font-family: "Monaco";
+	}
+	#betterDicesTxt {
+		color: red;
+	}
+	#betterScoreTxt {
+		color: red;
+	}
+	.dicebtn{		
+		background-color: yellow;		
+		font-size: 50px;			
+		box-shadow: 0 9px #222;
+	}
+	.dicebtn:hover {
+		background-color: white
+	}
+	.dicebtn:active {
+		background-color: white;
+		box-shadow: 0 0px #222;
+		transform: translateY(9px);	  
+	}
+	.resetbtn{
+		font-size: 20px;
+		background-color: white;	
+		position: absolute;
+		right:120px;
+	}
+	.resetbtn:hover{
+		background-color: #eee;		
+	}
+	.resetbtn:active{
+		background-color: #eee;	
+	}
+	.scorebtn{
+		background-color: green;	
+		font-size: 30px;	
+		box-shadow: -9px 0 #222;		
+	}
+	.scorebtn:hover {
+		background-color: lime
+	}
+	.scorebtn:active {
+		background-color: lime;
+		box-shadow: 0px 0 #222;
+		transform: translateX(-9px);	  
+	}
+	.parent{
+		text-align: right;
+	}
+	
+	button
+</style>
+</html>
