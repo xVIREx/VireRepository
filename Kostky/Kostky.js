@@ -1,5 +1,5 @@
-let countValues = [2.6339425, 2.4607015, 2.9546255, 3.9294165, 5.275825, 7.146476];
-let border = 0.81;
+let countValues = [2.584593, 2.43151, 2.9074575, 3.8727685, 5.179051, 7.01719];
+let border = 0.84;
 
 let dicesText = document.getElementById("dicesTxt");
 let betterDicesText = document.getElementById("betterDicesTxt");
@@ -199,7 +199,7 @@ function count_score(dices, previousThrow) {
   }
 
   if (count_elements(dices, 1) < 3) score += 1 * count_elements(dices, 1);
-  if (count_elements(dices, 1) < 3) score += 0.5 * count_elements(dices, 5);
+  if (count_elements(dices, 5) < 3) score += 0.5 * count_elements(dices, 5);
 
   if(score==0) {return 0;}
   return score + previousThrow;
@@ -241,8 +241,8 @@ function get_count_values() {
 
 function get_border() {
   let highest = [0, 0]
-  let value = 10000000;
-  for(let border = 0.85; border>0.75; border-=0.02){
+  let value = 1000000;
+  for(let border = 0.9; border>0.8; border-=0.01){
     let average = 0;
     for(let i = 0; i<value; i++){
       let dices = new_dices(6);
